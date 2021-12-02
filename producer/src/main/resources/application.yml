@@ -1,0 +1,10 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+schema-registry: "http://localhost:8081"
+partitions: 1
+bootstrap-servers: "localhost:9092"
+replications: 1
+topic.avro: paymentEventsAvroTopic

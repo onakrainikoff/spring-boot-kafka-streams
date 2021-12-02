@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: tests-local
+partitions: 1
+replications: 1
+topic:
+  avro: paymentEventsAvroTopic
+
+logging.level.root: INFO
+
+---
+spring:
+  config:
+    activate:
+      on-profile: tests-local
+bootstrap-servers: "localhost:9092"
+schema-registry: "http://localhost:8081"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: tests-remote
+bootstrap-servers: "${kafka_host}:${kafka_port}"
+schema-registry: "http://${schema_registry_host}:${schema_registry_port}"

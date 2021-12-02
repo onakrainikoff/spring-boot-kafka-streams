@@ -1,0 +1,17 @@
+{
+    "namespace": "ru.on8off.kafka.streams.model.avro",
+    "type": "record",
+    "name": "PaymentEventAvro",
+    "version": "1.1",
+     "fields": [
+       {"name": "timestamp",  "type": "long"},
+       {"name": "customerId", "type": "long"},
+       {"name":  "eventType", "type":  {
+           "type": "enum",
+           "name": "EventTypeAvro",
+           "symbols" : ["PaymentPageOpened", "PaymentTypeSelected", "PaymentDataFilled", "PaymentSucceed", "PaymentFailed"]
+          }
+       }
+     ]
+}
+
