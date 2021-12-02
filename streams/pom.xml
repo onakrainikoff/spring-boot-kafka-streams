@@ -28,8 +28,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>ru.on8off.kafka-streams-lesson</groupId>
-            <artifactId>model</artifactId>
+            <groupId>ru.on8off</groupId>
+            <artifactId>spring-boot-kafka-streams-model</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
