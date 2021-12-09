@@ -1,4 +1,4 @@
-package ru.on8off.kafka.streams.strem;
+package ru.on8off.kafka.streams.stream;
 
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.on8off.kafka.streams.model.Payment;
 import ru.on8off.kafka.streams.model.avro.PaymentEventAvro;
-import ru.on8off.kafka.streams.strem.mapper.PaymentMapper;
+import ru.on8off.kafka.streams.stream.mapper.PaymentMapper;
 
 @Service
 @Slf4j

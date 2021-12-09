@@ -5,11 +5,11 @@ import org.apache.kafka.streams.Topology;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ru.on8off.kafka.streams.strem.PaymentAbandonedStream;
-import ru.on8off.kafka.streams.strem.PaymentAggregateAndSplitStream;
-import ru.on8off.kafka.streams.strem.PaymentFailedStream;
-import ru.on8off.kafka.streams.strem.PaymentSucceedStream;
-import ru.on8off.kafka.streams.strem.SourceMappingStream;
+import ru.on8off.kafka.streams.stream.PaymentAbandonedStream;
+import ru.on8off.kafka.streams.stream.PaymentAggregateAndSplitStream;
+import ru.on8off.kafka.streams.stream.PaymentFailedStream;
+import ru.on8off.kafka.streams.stream.PaymentSucceedStream;
+import ru.on8off.kafka.streams.stream.SourceMappingStream;
 
 @Configuration
 public class TopologyConfiguration {

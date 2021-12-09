@@ -1,4 +1,4 @@
-package ru.on8off.kafka.streams.strem.transformer;
+package ru.on8off.kafka.streams.stream.transformer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.streams.kstream.Aggregator;

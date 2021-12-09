@@ -1,4 +1,4 @@
-package ru.on8off.kafka.streams.strem.mapper;
+package ru.on8off.kafka.streams.stream.mapper;
 
 import org.apache.kafka.streams.kstream.ValueMapper;
 import ru.on8off.kafka.streams.model.Payment;

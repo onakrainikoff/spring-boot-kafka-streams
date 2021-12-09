@@ -1,4 +1,4 @@
-package ru.on8off.kafka.streams.strem.transformer;
+package ru.on8off.kafka.streams.stream.transformer;
 
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.Transformer;

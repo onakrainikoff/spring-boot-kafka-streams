@@ -1,5 +1,6 @@
 package ru.on8off.kafka.streams.configuration;
 
+import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.processor.WallclockTimestampExtractor;
@@ -35,6 +36,7 @@ public class KafkaStreamsConfiguration {
         properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.Long().getClass());
         properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         properties.put(StreamsConfig.NUM_STREAM_THREADS_CONFIG, partitions);
+        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         return new org.springframework.kafka.config.KafkaStreamsConfiguration(properties);
     }
 

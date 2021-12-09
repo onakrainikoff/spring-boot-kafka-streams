@@ -1,4 +1,4 @@
-package ru.on8off.kafka.streams.strem;
+package ru.on8off.kafka.streams.stream;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.common.serialization.Serde;
@@ -12,16 +12,16 @@ import ru.on8off.kafka.streams.model.Payment;
 
 @Service
 @Slf4j
-public class PaymentSucceedStream {
-    @Value("${topics.paymentsSuccess}")
-    private String paymentsSuccessTopic;
+public class PaymentAbandonedStream {
+    @Value("${topics.paymentsAbandoned}")
+    private String paymentsAbandonedTopic;
 
     @Autowired
     private Serde<Payment> paymentSerde;
 
     public void stream(StreamsBuilder builder) {
-        var paymentsStream = builder.stream(paymentsSuccessTopic, Consumed.with(Serdes.Long(), paymentSerde))
-                .peek((aLong, siteVisit) -> log.info(">>> PaymentSucceedStream consuming: key={}, value={}", aLong, siteVisit));
+        var paymentsStream = builder.stream(paymentsAbandonedTopic, Consumed.with(Serdes.Long(), paymentSerde))
+                .peek((aLong, siteVisit) -> log.info(">>> paymentAbandonedStream consuming: key={}, value={}", aLong, siteVisit));
     }
 
 }
